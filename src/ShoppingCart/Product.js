@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import CartDesign from "./CartDesign";
 import { AppContext } from "../App";
+import Header from "./Header";
 
 function Product() {
   const { productApiData, setProductApiData, setApiError,apiError } =
@@ -20,6 +21,7 @@ function Product() {
 
   return (
     <>
+     <Header />
     {apiError === true ?<div><p style={{color:"red",display:"flex",justifyContent:"center"}}>Error Occured! Please try again Later!</p></div>:
     <div
       id="productContainer"

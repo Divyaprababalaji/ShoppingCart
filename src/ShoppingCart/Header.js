@@ -27,7 +27,7 @@ function Header() {
       )}
       <ul>
         <li>
-          <Link id="product" onClick={handleHeaderLinkClick} to={"/"}>
+          <Link id="Product" onClick={handleHeaderLinkClick} to={"/Product"}>
             Product
           </Link>
         </li>
@@ -35,7 +35,7 @@ function Header() {
           <Link id="cart" onClick={handleHeaderLinkClick} to={"/Cart"}>
             ViewCart
           </Link>
-          <span style={{ color: "red", marginLeft: "4px" }}>
+          <span style={{ color: "red", marginLeft: "4px" , marginRight: "4px"}}>
             {selectedProduct?.length}
           </span>
         </li>

@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes  } from "react-router-dom";
 import "./App.css";
-import Header from "./ShoppingCart/Header";
+
 import Product from "./ShoppingCart/Product";
 import ViewCart from "./ShoppingCart/ViewCart";
 import { createContext, useState } from "react";
-
+import Loginsignup from "./ShoppingCart/loginsignup";
 export const AppContext = createContext();
 
 function App() {
@@ -35,10 +35,12 @@ function App() {
         }}
       >
         <BrowserRouter>
-          <Header />
+         
           <div className="container">
             <Routes>
-              <Route path="/" element={<Product />} />
+              <Route path="/" element={<Loginsignup />} />
+              <Route path="/Login" element={<Loginsignup/>}/>
+              <Route path="/Product" element={<Product />} />
               <Route path="/Cart" element={<ViewCart />} />
             </Routes>
           </div>
