@@ -4,7 +4,10 @@ import "./App.css";
 import Product from "./ShoppingCart/Product";
 import ViewCart from "./ShoppingCart/ViewCart";
 import { createContext, useState } from "react";
-import Loginsignup from "./ShoppingCart/loginsignup";
+import Login  from "./ShoppingCart/Login";
+import Signup from "./ShoppingCart/Signup";
+
+
 export const AppContext = createContext();
 
 function App() {
@@ -38,8 +41,8 @@ function App() {
          
           <div className="container">
             <Routes>
-              <Route path="/" element={<Loginsignup />} />
-              <Route path="/Login" element={<Loginsignup/>}/>
+              <Route path="/" element={<Signup />} />
+              <Route path="/Login" element={<Login/>}/>
               <Route path="/Product" element={<Product />} />
               <Route path="/Cart" element={<ViewCart />} />
             </Routes>
